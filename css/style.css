@@ -77,10 +77,10 @@ body{
     border-radius: 30%;
     filter: grayscale(0%);
 }
-#linkedin{background-image: url('/assets/LinkedIN.svg'); background-position: center; background-size: contain;}
-#github{background-image: url('/assets/Github.svg'); background-position: center; background-size: contain;}
-#instagram{background-image: url('/assets/Instagram.svg'); background-position: center; background-size: contain;}
-#portfolio{background-image: url('/assets/portfolio.svg'); background-position: center; background-size: contain;}
+#linkedin{background-image: url(../assets/LinkedIN.svg); background-position: center; background-size: contain;}
+#github{background-image: url(../assets/Github.svg); background-position: center; background-size: contain;}
+#instagram{background-image: url(../assets/Instagram.svg); background-position: center; background-size: contain;}
+#portfolio{background-image: url(../assets/portfolio.svg); background-position: center; background-size: contain;}
 
 /* POUR LE BOUTON DE MENU */
 #menu-btn{
