@@ -6,7 +6,7 @@ $bro-color: #ccc;
 
 .aStory{
     position: absolute;
-    right: -100%;
+    right: 0%;
     height: 100%;
     width: 100%;
     backdrop-filter: blur(10px);
@@ -14,7 +14,8 @@ $bro-color: #ccc;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    transition: right 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(100%,0%);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 
 
     .card{
@@ -24,6 +25,7 @@ $bro-color: #ccc;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        // overflow: scroll;
         // border: 2px solid blue;
     
         h1{
@@ -35,7 +37,7 @@ $bro-color: #ccc;
             text-align: justify;
             padding-left: 10px;
             border-left: 2px solid $cle-color;
-            font-size: 1rem;
+            font-size: 1.2vmax;
         }
     }
     

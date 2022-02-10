@@ -29,7 +29,9 @@ for (let index = 0; index < leaveStoryBtn.length; index++) {
 
 function leaveStory(){
     for (let index = 0; index < storiesList.length; index++) {
-        storiesList[index].style.right = "-100%"
+        // storiesList[index].style.right = "-100%"
+        storiesList[index].style.transform = "translate(100%,0%)"
+        
         
     }
 }
@@ -39,25 +41,29 @@ function leaveStory(){
 const dukeBtn = document.getElementById("NC")
 const dukeStory = document.getElementById("isDuke")
 dukeBtn.addEventListener("click",function(){
-    dukeStory.style.right = "0%"
+    // dukeStory.style.right = "0%"
+    dukeStory.style.transform = "translate(0%,0%)"
 })
 
 const cleBtn = document.getElementById("OH")
 const cleStory = document.getElementById("isCleveland")
 cleBtn.addEventListener("click",function(){
-    cleStory.style.right = "0%"
+    // cleStory.style.right = "0%"
+    cleStory.style.transform = "translate(0%,0%)"
 })
 
 const bosBtn = document.getElementById("MA")
 const bosStory = document.getElementById("isBoston")
 bosBtn.addEventListener("click",function(){
-    bosStory.style.right = "0%"
+    // bosStory.style.right = "0%"
+    bosStory.style.transform = "translate(0%,0%)"
 })
 
 const broBtn = document.getElementById("NY")
 const broStory = document.getElementById("isBrooklyn")
 broBtn.addEventListener("click",function(){
-    broStory.style.right = "0%"
+    // broStory.style.right = "0%"
+    broStory.style.transform = "translate(0%,0%)"
 })
 
 kyrieNumber.textContent = "11"

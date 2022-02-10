@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
 /* 
 [BASE DE L'AFFICHAGE]
 */
@@ -22,6 +24,7 @@ body{
     
 }
 #content{
+    min-height: 500px;
     height: 100vh;
     width: 100%;
     position: relative;
@@ -35,6 +38,7 @@ body{
 [PREMIERE PAGE]
  */
 #menu{
+    min-height: 500px;
     position: absolute;
     z-index: 1;
     right: 0%;
@@ -76,12 +80,55 @@ body{
 .socials:hover{
     border-radius: 30%;
     filter: grayscale(0%);
+
 }
 
 #linkedin{background-image: url(../assets/link.svg); background-position: center; background-size: contain;}
 #github{background-image: url(../assets/Github.svg); background-position: center; background-size: contain;}
 #instagram{background-image: url(../assets/instagram-logo.svg); background-position: center; background-size: contain;}
 #portfolio{background-image: url(../assets/portfolio.svg); background-position: center; background-size: contain;}
+
+/* NICE LITTLE ANIMATION */
+#portfolio:hover::before{
+    position: absolute;
+    opacity: 0%; 
+    left: -250%;
+    top: 150%;
+    transform: rotate(-30deg);
+    content: url(../assets/lowerArrow.svg);
+    animation: slb 0.3s ease-in-out forwards;
+    
+
+}
+#portfolio:hover::after{
+    
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.5rem;
+    position: absolute;
+    opacity: 0%;
+    left: -680%;
+    top: 160%;
+    color: #d3d3d3;
+    content: "check out my portfolio";
+    animation: sla 0.3s ease-in-out forwards;
+}
+
+@keyframes slb {
+    0%{
+        opacity: 0%;
+        transform: rotate(-30deg) translate(0%, 0%);
+    }
+    100%{
+        transform: rotate(-30deg) translate(40%, 100%);
+        opacity: 100%;
+    }
+}
+
+@keyframes sla {
+    0%{opacity: 0%; transform: translate(0%, 0%);}
+    100%{opacity: 100%; transform: translate(20%, 20%);}
+}
+
 
 /* POUR LE BOUTON DE MENU */
 #menu-btn{
@@ -113,7 +160,7 @@ body{
     transform: rotate(-45deg);
 }
 .part-of-menu-btn:nth-child(3){
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scale(0.7,1);
 }
 .part-of-menu-btn:nth-child(4){
     transform: rotate(-45deg);
@@ -134,10 +181,6 @@ body{
 }
 
 
-
-#menu-btn:hover{
-    /* background-color: rgba(146, 146, 146, 0.2); */
-}
 
 .firstLook{
     height: 100%;
@@ -246,4 +289,26 @@ img{
     100%{transform: translateY(5px);}
 }
 
-
+#noResponsiveForSmallDevices{display: none;}
+@media screen and (max-width: 1000px){
+    #content{display: none;}
+    #noResponsiveForSmallDevices{
+        display: initial;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 10;
+        background-color: black;
+        color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #noResponsiveForSmallDevices h1{
+        font-size: 9vw;
+    }
+    #noResponsiveForSmallDevices p{
+        font-size: 2vw;
+    }
+}
