@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.story{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+/* THE BACKGROUND IMAGE */
+.bg-img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(../photos/b&wKI.jpeg);
+    opacity: 70%;
+    background-size: cover;
+    background-position: top center;
+    
+    
+}
+
+/* THE MAP */
+#us-map{
+    position: absolute;
+    left: -500px;
+    top: 10%;
+}
+.toShow{
+    transition: fill-opacity 0.2s ease;
+    cursor: pointer;
+}
+.toShow:hover{fill-opacity: 1;}
+
+/* THE CHOOSE THE STORY CARD */
+.choose-the-story{
+    position: absolute;
+    right: 10vw;
+    top: 10%;
+}
+.choose-the-story h1{font-size: 4vmax;}
+.choose-the-story p{text-align: end; font-size: 0.9rem; color: darkgray;}

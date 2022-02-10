@@ -1,0 +1,72 @@
+#caroussel{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    // overflow: hidden;
+
+    h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #F7F7F7;
+        font-size: 5rem;
+    }
+
+    #car-wrapper{
+        position: relative;
+        width: 300%;
+        height: 100%;
+        display: flex;
+        display: row;
+        color: white;
+
+        div{
+            // position: absolute;
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        #fst-img{
+            background-image: url(../photos/Irving5.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+    
+        #snd-img{
+            background-image: url(../photos/bucket.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #trd-img{
+            background-image: url(../photos/kyrieDraft.jpeg);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    button{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: 2px solid red;
+        z-index: 5;
+        background-color: aquamarine;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    #left-carousel-btn{
+        top: 50%;
+        left: 0%;
+        transform: translate(0%,-50%);
+    }
+    #right-carousel-btn{
+        top: 50%;
+        right: 0%;
+        transform: translate(0%,-50%);
+    }
+
+}
