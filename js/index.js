@@ -79,3 +79,45 @@ kyrieNumber.textContent = "11"
 //     }
 
 // }
+
+
+// SOUND EFFECTS //
+
+const draftBtn = document.getElementById("draft-btn")
+draftBtn.addEventListener("click", () => {
+    document.getElementById("draft-sound").play()
+})
+
+// CAROUSSEL // 
+const leftCarBtn = document.getElementById("left-carousel-btn")
+const rightCarBtn = document.getElementById("right-carousel-btn")
+const imgsWrapper = document.getElementById("car-wrapper")
+let offsetPercentage = 0
+
+
+
+rightCarBtn.addEventListener("click", () => {
+    if (offsetPercentage > -68) {
+        slideRight()
+    } 
+})
+
+leftCarBtn.addEventListener("click", () => {
+    if (offsetPercentage < 0) {
+        slideLeft()
+    } 
+})
+
+function slideRight(){
+    offsetPercentage = offsetPercentage - 34
+    imgsWrapper.style.transform = "translateX(" + offsetPercentage + "%)"
+    console.log(offsetPercentage)
+    console.log(imgsWrapper.style.transform)
+}
+
+function slideLeft(){
+    offsetPercentage = offsetPercentage + 34
+    imgsWrapper.style.transform = "translateX(" + offsetPercentage + "%)"
+    console.log(offsetPercentage)
+    console.log(imgsWrapper.style.transform)
+}
