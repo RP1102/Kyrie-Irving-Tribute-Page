@@ -1,63 +1,18 @@
-// #caroussel {
-//   position: relative;
-//   height: 100vh;
-//   width: 100%;
-//   // overflow: hidden;
-
-//   h1 {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     color: #f7f7f7;
-//     font-size: 6vw;
-//   }
-
-//   p {
-//     // position: absolute;
-//     color: #f7f7f7;
-//   }
-
-//   #car-wrapper {
-//     position: relative;
-//     width: 300%;
-//     height: 100%;
-//     display: flex;
-//     display: row;
-//     color: white;
-
-//     div {
-//       // position: absolute;
-//       width: 100vw;
-//       height: 100%;
-//       display: flex;
-//       justify-content: flex-end;
-//       align-items: center;
-//     }
-
-//     #fst-img {
-//       background-image: url(../photos/Irving5.jpg);
-//       background-position: center;
-//       background-size: cover;
-//     }
-
-//     #snd-img {
-//       background-image: url(../photos/bucket.jpg);
-//       background-position: center;
-//       background-size: cover;
-//     }
-//     #trd-img {
-//       background-image: url(../photos/kyrieDraft.jpeg);
-//       background-position: center;
-//       background-size: cover;
-//     }
-//   }
-// }
-
 #caroussel {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
+
+
+  h1{
+    z-index: 10;
+    position: absolute;
+    color: #f7f7f7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
 
   .car-btns {
     width: 100vw;
@@ -70,14 +25,39 @@
     transform: translate(-50%, 50%);
 
     button {
+      margin: 20px;
       cursor: pointer;
-      width: 100px;
+      width: 50px;
       height: 50px;
+      border-radius: 50%;
+      background-color: transparent;
+      border: none;
+      position: relative;
+      transition: background-color 0.4s ease-in-out;
+
+      &:hover {
+        background: rgba(146, 146, 146, 0.2);
+      }
+
+      svg {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+      }
+      #to-left {
+        top: 50%;
+        left: 45%;
+        transform: translate(-45%, -50%);
+      }
+      #to-right {
+        top: 50%;
+        left: 55%;
+        transform: translate(-55%, -50%);
+      }
     }
   }
 
   #car-wrapper {
-    z-index: -1;
     position: relative;
     width: 300%;
     height: 100%;
@@ -89,6 +69,7 @@
       width: 34%;
 
       .sound-btn {
+        z-index: 10;
         cursor: pointer;
         width: 200px;
         height: 200px;
@@ -116,13 +97,14 @@
     #fst-img {
       left: 0%;
       background-image: url(../photos/kyrieDraft.jpeg);
+
       background-position: center;
       background-size: cover;
     }
 
     #snd-img {
       left: 34%;
-      background-image: url(../photos/kyrieCavs3.jpeg);
+      background-image: url(../photos/kyrieCavs2.jpeg);
       background-position: center;
       background-size: cover;
     }
